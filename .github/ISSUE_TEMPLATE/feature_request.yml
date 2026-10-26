@@ -1,0 +1,16 @@
+name: Идея
+description: Предложить новую возможность
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Что хочется
+      description: Опишите возможность и зачем она нужна.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Как это сделано в других клиентах
+      description: Например, в Happ, Hiddify или v2rayN — если знаете.

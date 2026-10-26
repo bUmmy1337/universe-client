@@ -1,0 +1,39 @@
+name: Ошибка
+description: Что-то работает не так
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт! **Не публикуйте ссылку на подписку, ключи или HWID** — они дают доступ к вашему VPN.
+  - type: input
+    id: version
+    attributes:
+      label: Версия universe и Windows
+      placeholder: universe 0.2.0, Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: Что делали, что ожидали и что получили.
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Формат подписки
+      options:
+        - Список ссылок
+        - base64
+        - Xray JSON
+        - sing-box JSON
+        - Ключи вручную
+        - Не связано с подпиской
+  - type: textarea
+    id: log
+    attributes:
+      label: Журнал
+      description: Раздел «журнал» → «копировать». Уберите из него адреса и ключи, если они там есть.
+      render: text
